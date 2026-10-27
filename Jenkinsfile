@@ -36,10 +36,7 @@ pipeline {
         stage('Load Image into Minikube') {
             steps {
                 sh '''
-                    docker save $IMAGE_NAME -o campus-equipment-booking.tar
-                    docker cp campus-equipment-booking.tar minikube:/tmp/campus-equipment-booking.tar
-                    docker exec minikube ctr -n k8s.io images import /tmp/campus-equipment-booking.tar
-                    rm campus-equipment-booking.tar
+                    docker save $IMAGE_NAME | docker exec -i minikube ctr -n k8s.io images import -
                 '''
             }
         }
