@@ -1,4 +1,6 @@
-# Campus Equipment Booking
+# DevOps Lab CIA-2
+
+## Campus Equipment Booking
 
 A Spring Boot application for booking campus equipment. This repository includes booking-validation fixes, automated tests, Docker packaging, Kubernetes deployment manifests, and a Jenkins CI/CD pipeline.
 
@@ -304,6 +306,5 @@ mvn package -DskipTests
 kubectl get deployments
 kubectl get pods
 kubectl get services
-```
 
-Confirm that the latest Jenkins build is successful and that the working tree contains only intended changes.
+```
